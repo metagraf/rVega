@@ -13,7 +13,7 @@ Read more about Vega at [http://trifacta.github.com/vega/](http://trifacta.githu
 
 ## Example
 
-```r
+```
 library(rVega)
 
 # Treemap specification
