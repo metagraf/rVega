@@ -1,0 +1,17 @@
+Package: rVega
+Type: Package
+Title: rVega: An R wrapper for Vega
+Version: 0.1
+Author: Thomas Reinholdsson
+Maintainer: Thomas Reinholdsson <reinholdsson@gmail.com>
+Description: ...
+License: 
+Depends:
+    R (>= 2.14.0),
+    RJSONIO,
+    shiny
+Collate:
+    'Vega-class.r'
+    'renderVega.r'
+    'vegaOutput.r'
+    'rVega.r'

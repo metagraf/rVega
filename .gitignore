@@ -1,5 +1,5 @@
-# History files
+*.DS_Store
 .Rhistory
-
-# Example code in package build process
-*-Ex.R
+.Rproj.user
+*.Rproj
+.Rbuildignore

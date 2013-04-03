@@ -1,0 +1,4 @@
+export(renderVega)
+export(vegaOutput)
+import(RJSONIO)
+import(shiny)
