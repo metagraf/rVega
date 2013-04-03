@@ -1,0 +1,20 @@
+
+body {
+    margin:1cm;
+	padding: 0;
+	font-size: 13px;
+}
+
+.span4 {
+    margin:0.4cm;
+    padding: 0;
+	font-size: 13px;
+}
+
+input, select, textarea, p {
+    font-size: 13px;
+}
+
+select {
+    width: 25%;
+}
