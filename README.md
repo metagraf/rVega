@@ -2,14 +2,14 @@
 
 Created by Thomas Reinholdsson (<reinholdsson@gmail.com>).
 
-Read more about Vega at [http://trifacta.github.com/vega/](http://trifacta.github.com/vega/).
+Shiny demo: [http://glimmer.rstudio.com/reinholdsson/rVega-treemap/](http://glimmer.rstudio.com/reinholdsson/rVega-treemap/).
 
-...
+More about Vega: [http://trifacta.github.com/vega/](http://trifacta.github.com/vega/).
 
 ## Installation
 
     library(devtools)
-    install_github("rVega", "reinholdsson")
+    install_github("rVega", "metagraf")
 
 ## Example
 
