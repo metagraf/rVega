@@ -6,7 +6,7 @@
   "data": [
     {
       "name": "table",
-      "values": [154, 23, 47, 6, 52, 19],
+      "values": [12, 23, 47, 6, 52, 19],
       "transform": [
         {"type": "facet"},
         {"type": "treemap"},
