@@ -14,7 +14,6 @@ More about Vega: [http://trifacta.github.com/vega/](http://trifacta.github.com/v
 
 ```
 library(rVega)
-
 vega_treemap(1:26, letters)
 ```
 
