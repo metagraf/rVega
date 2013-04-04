@@ -2,8 +2,8 @@
 \alias{vega_treemap}
 \title{Vega treemap}
 \usage{
-  vega_treemap(data, labels = names(data), width = 200,
-    height = 200, font = "Helvetica Neue", font_size = 14,
+  vega_treemap(data, labels = names(data), width = 400,
+    height = 400, font = "Helvetica Neue", font_size = 14,
     fill_color = "pink", hover_color = "lightblue",
     padding = c(0, 0, 0, 0))
 }

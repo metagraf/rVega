@@ -16,8 +16,8 @@
 vega_treemap <- function(
     data, 
     labels = names(data),
-    width = 200, 
-    height = 200, 
+    width = 500, 
+    height = 400, 
     font = "Helvetica Neue", 
     font_size = 14, 
     fill_color = "pink", 
