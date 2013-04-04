@@ -15,7 +15,7 @@ shinyServer(function(input, output) {
             data = list(
                 list(
                     name = "table",
-                    values = sample(1:100, input$si_vega1),
+                    values = sample(20:100, input$si_vega1),
                     transform = list(
                         list(type = "facet"), 
                         list(type = "treemap"),
@@ -74,7 +74,7 @@ shinyServer(function(input, output) {
             data = list(
                 list(
                     name = "table",
-                    values = sample(1:100, input$si_vega2),
+                    values = sample(20:100, input$si_vega2),
                     transform = list(
                         list(type = "facet"), 
                         list(type = "treemap"),
