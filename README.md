@@ -18,3 +18,23 @@ vega_treemap(1:26, letters)
 ```
 
 => Live demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/](http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/)
+
+## Use with Shiny
+
+#### server.R
+```
+library(rVega)
+shinyServer(function(input, output) {
+    output$treemap <- renderVega({
+        vega_treemap(1:26, letters)
+    })
+})
+```
+
+#### ui.R
+```
+library(rVega)
+shinyUI(bootstrapPage(
+    vegaOutput("treemap")
+))
+```
