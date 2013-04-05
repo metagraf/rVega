@@ -38,3 +38,14 @@ shinyUI(bootstrapPage(
     vegaOutput("treemap")
 ))
 ```
+
+## See also
+
+- [gg2v](https://github.com/hadley/gg2v) by Hadley Wickham
+
+- [clickme](https://github.com/nachocab/clickme) by Nacho Caballero
+
+
+
+
+
