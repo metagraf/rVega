@@ -8,8 +8,8 @@
 #' @param height Height
 #' @param font Font
 #' @param font.size Font size
-#' @param fill_color Fill color
-#' @param hover_color Hover color
+#' @param fill.color Fill color
+#' @param hover.color Hover color
 #' @param padding Padding c("top", "bottom", "left", "right")
 #' 
 #' @export
@@ -19,9 +19,9 @@ vega_treemap <- function(
     width = 500, 
     height = 400, 
     font = "Helvetica Neue", 
-    font_size = 14, 
-    fill_color = "pink", 
-    hover_color = "lightblue", 
+    font.size = 14, 
+    fill.color = "pink", 
+    hover.color = "lightblue", 
     padding = c(0, 0, 0, 0)
 ) {
     
@@ -67,8 +67,8 @@ vega_treemap <- function(
                             height = list(field = "height"),
                             stroke = list(value = "#fff")
                         ),
-                        update = list(fill = list(value = fill_color)),
-                        hover = list(fill = list(value = hover_color))
+                        update = list(fill = list(value = fill.color)),
+                        hover = list(fill = list(value = hover.color))
                     )
                 ),
                 list(
@@ -82,7 +82,7 @@ vega_treemap <- function(
                             dx = list(value = 4),
                             dy = list(value = 4),
                             font = list(value = font),
-                            fontSize = list(value = font_size),
+                            fontSize = list(value = font.size),
                             align = list(value = "left"),
                             baseline = list(value = "top"),
                             fill = list(value = "#000"),

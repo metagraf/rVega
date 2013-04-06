@@ -9,9 +9,10 @@ vega_geopath <- function(
     width = 1200, 
     height = 800, 
     font = "Helvetica Neue", 
-    font_size = 14, 
-    fill_color = "pink", 
-    hover_color = "lightblue", 
+    font.size = 14, 
+    fill.color = "pink", 
+    hover.color = "lightblue",
+    border.color = "black",
     padding = c(0, 0, 0, 0),
     url = "data/us-states.json",
     projection = "albersUsa",
@@ -49,11 +50,11 @@ vega_geopath <- function(
                     ),
                     properties = list(
                         enter = list(
-                            stroke = list(value = "#fff"),
+                            stroke = list(value = border.color),
                             path = list(field = "path")
                         ),
-                        update = list(fill = list(value = fill_color)),
-                        hover = list(fill = list(value = hover_color))
+                        update = list(fill = list(value = fill.color)),
+                        hover = list(fill = list(value = hover.color))
                     )
                 )
             )
