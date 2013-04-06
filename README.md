@@ -19,6 +19,14 @@ vega_treemap(1:26, letters)
 
 => Live demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/](http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/)
 
+### Geopath
+
+```
+vega_geopath(url = "data/world-countries.json", projection = "winkel3", scale = 200)
+
+vega_geopath(url = "data/world-countries.json", projection = "orthographic", scale = 300)
+```
+
 ## Use with Shiny
 
 #### server.R

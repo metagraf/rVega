@@ -6,8 +6,7 @@
     height = 800, font = "Helvetica Neue", font_size = 14,
     fill_color = "pink", hover_color = "lightblue",
     padding = c(0, 0, 0, 0), url = "data/us-states.json",
-    projection = "albersUsa", scale = 300,
-    viewport = c(960, 500), translate = viewport)
+    projection = "albersUsa", scale = 300)
 }
 \description{
   Create a geopath visualization
