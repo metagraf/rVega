@@ -12,19 +12,21 @@ vega_geopath <- function(
     font_size = 14, 
     fill_color = "pink", 
     hover_color = "lightblue", 
-    padding = c(0, 0, 0, 0)
+    padding = c(0, 0, 0, 0),
+    url = "data/world-countries.json",
+    projection = "winkel3"
     ) {
     
     # Create Vega object
     rVega:::Vega$new(
         list(
-            width = width,
-            height = height,
+            width = 1920,
+            height = 1000,
             viewport = c(960, 500),
             data = list(
                 list(
                     name = "world",
-                    url = "data/countries.geo.json",
+                    url = url,
                     format = list(
                         type = "json",
                         property = "features"
@@ -36,13 +38,13 @@ vega_geopath <- function(
                     type = "path",
                     from = list(
                         data = "world",
-                        transform = list(
+                        transform = list(list(
                             type = "geopath",
                             value = "data",
-                            projection = "winkel3",
+                            projection = projection,
                             scale = 300,
                             translate = c(960, 500)
-                        )
+                        ))
                     ),
                     properties = list(
                         enter = list(
