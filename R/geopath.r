@@ -4,24 +4,18 @@
 #' 
 #' @export
 geopath <- function(
-    data, 
-    labels = names(data),
-    width = 600, 
-    height = 400, 
-    font = "Helvetica Neue", 
-    font.size = 14, 
     fill.color = "pink", 
     hover.color = "lightblue",
     border.color = "black",
-    padding = c(0, 0, 0, 0),
     url = "data/us-states.json",
     projection = "albersUsa",
     scale = 500,
-    translate = c(width / 2, height / 2)  # map position is centered given the width and height
+    translate = c(a$opt$width / 2,  a$opt$height / 2),  # as default map position is centered
+    ...
     ) {
 
     # Create Vega object
-    a <- rVega:::Vega$new(width = width, height = height)
+    a <- rVega:::Vega$new(...)
 
     a$data(
         name = "world",
