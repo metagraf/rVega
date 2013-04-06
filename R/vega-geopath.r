@@ -15,7 +15,8 @@ vega_geopath <- function(
     padding = c(0, 0, 0, 0),
     url = "data/us-states.json",
     projection = "albersUsa",
-    scale = 300
+    scale = 300,
+    translate = c(width / 2, height / 2)  # map position is centered given the width and height
     ) {
 
     # Create Vega object
@@ -42,8 +43,8 @@ vega_geopath <- function(
                             type = "geopath",
                             value = "data",
                             projection = projection,
-                            scale = scale#,
-                            #translate = translate
+                            scale = scale,
+                            translate = translate
                         ))
                     ),
                     properties = list(
