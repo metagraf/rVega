@@ -14,18 +14,23 @@ vega_geopath <- function(
     hover_color = "lightblue", 
     padding = c(0, 0, 0, 0),
     url = "data/us-states.json",
-    projection = "albersUsa"
+    projection = "albersUsa",
+    scale = 300,
+    viewport = c(960, 500),
+    translate = viewport
     ) {
     
     # TODO
     # How to get all url (geoJSON) and projection types to work?
     
+    #suppressMessages(singleton(addResourcePath("geo", system.file('js/d3-plugins/geo/projection', package='rVega'))))
+
     # Create Vega object
     rVega:::Vega$new(
         list(
             width = width,
             height = height,
-            #viewport = c(960, 500),
+            viewport = viewport,
             data = list(
                 list(
                     name = "world",
@@ -44,9 +49,9 @@ vega_geopath <- function(
                         transform = list(list(
                             type = "geopath",
                             value = "data",
-                            projection = projection
-                            #scale = 300,
-                            #translate = c(960, 500)
+                            projection = projection,
+                            scale = scale,
+                            translate = translate
                         ))
                     ),
                     properties = list(
