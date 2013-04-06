@@ -21,43 +21,52 @@ geopath <- function(
     ) {
 
     # Create Vega object
-    rVega:::Vega$new(
-        list(
-            width = width,
-            height = height,
-            data = list(
+    a <- rVega:::Vega$new()
+    
+    a$width(width)
+    a$height(height)
+    
+    a$data(
+        name = "world",
+        url = url,
+        format = list(
+            type = "json",
+            property = "features"
+        )
+    )
+
+    a$marks(
+        type = "path",
+        from = list(
+            data = "world",
+            transform = list(
                 list(
-                    name = "world",
-                    url = url,
-                    format = list(
-                        type = "json",
-                        property = "features"
-                    )
+                    type = "geopath",
+                    value = "data",
+                    projection = projection,
+                    scale = scale,
+                    translate = translate
+                )
+            )
+        ),
+        properties = list(
+            enter = list(
+                stroke = list(value = border.color),
+                path = list(field = "path")
+            ),
+            update = list(
+                fill = list(
+                    value = fill.color
                 )
             ),
-            marks = list(
-                list(
-                    type = "path",
-                    from = list(
-                        data = "world",
-                        transform = list(list(
-                            type = "geopath",
-                            value = "data",
-                            projection = projection,
-                            scale = scale,
-                            translate = translate
-                        ))
-                    ),
-                    properties = list(
-                        enter = list(
-                            stroke = list(value = border.color),
-                            path = list(field = "path")
-                        ),
-                        update = list(fill = list(value = fill.color)),
-                        hover = list(fill = list(value = hover.color))
-                    )
+            hover = list(
+                fill = list(
+                    value = hover.color
                 )
             )
         )
     )
+    
+    return(a)
+
 }

@@ -39,58 +39,63 @@ treemap <- function(
     )
 
     # Create Vega object
-    rVega:::Vega$new(
-        list(
-            name = "treemap",
-            width = width,
-            height = height,
-            padding = list(top = padding[1], bottom = padding[2], left = padding[3], right = padding[4]),
-            data = list(
-                list(
-                    name = "table",
-                    values = x,
-                    transform = list(
-                        list(type = "facet"), 
-                        list(type = "treemap", value = "data.a"),
-                        list(type = "filter", test = "!d.children"))
-                )
+    a <- rVega:::Vega$new()
+    
+    #a$name("treemap")
+    a$width(width)
+    a$height(height)
+    a$padding(
+        top = padding[1], 
+        bottom = padding[2], 
+        left = padding[3], 
+        right = padding[4]
+    )
+    
+    a$data(
+        name = "table",
+        values = x,
+        transform = list(
+            list(type = "facet"), 
+            list(type = "treemap", value = "data.a"),
+            list(type = "filter", test = "!d.children"))
+    )
+    
+    a$marks(
+        type = "rect",
+        from = list(data = "table"),
+        properties = list(
+            enter = list(
+                x = list(field = "x"),
+                y = list(field = "y"),
+                width = list(field = "width"),
+                height = list(field = "height"),
+                stroke = list(value = "#fff")
             ),
-            marks = list(
-                list(
-                    type = "rect",
-                    from = list(data = "table"),
-                    properties = list(
-                        enter = list(
-                            x = list(field = "x"),
-                            y = list(field = "y"),
-                            width = list(field = "width"),
-                            height = list(field = "height"),
-                            stroke = list(value = "#fff")
-                        ),
-                        update = list(fill = list(value = fill.color)),
-                        hover = list(fill = list(value = hover.color))
-                    )
-                ),
-                list(
-                    type = "text",
-                    from = list(data = "table"),
-                    interactive = FALSE,
-                    properties = list(
-                        enter = list(
-                            x = list(field = "x"),
-                            y = list(field = "y"),
-                            dx = list(value = 4),
-                            dy = list(value = 4),
-                            font = list(value = font),
-                            fontSize = list(value = font.size),
-                            align = list(value = "left"),
-                            baseline = list(value = "top"),
-                            fill = list(value = "#000"),
-                            text = list(field = "data.b")
-                        )
-                    )
-                )
+            update = list(fill = list(value = fill.color)),
+            hover = list(fill = list(value = hover.color))
+        )
+    )
+    
+    a$marks(
+        type = "text",
+        from = list(data = "table"),
+        interactive = FALSE,
+        properties = list(
+            enter = list(
+                x = list(field = "x"),
+                y = list(field = "y"),
+                dx = list(value = 4),
+                dy = list(value = 4),
+                font = list(value = font),
+                fontSize = list(value = font.size),
+                align = list(value = "left"),
+                baseline = list(value = "top"),
+                fill = list(value = "#000"),
+                text = list(field = "data.b")
             )
         )
     )
+    
+    return(a)
+
 }

@@ -17,15 +17,24 @@ Vega <- setRefClass(
         },
 
         #' Wrapper methods
-        name = function(...) opt$name <<- list(...),
-        width = function(...) opt$width <<- list(...),
-        height = function(...) opt$height <<- list(...),
+        name = function(x) opt$name <<- x,
+        width = function(x) opt$width <<- x,
+        height = function(x) opt$height <<- x,
         viewport = function(...) opt$viewport <<- list(...),
         padding = function(...) opt$padding <<- list(...),
-        data = function(...) opt$data <<- list(...),
+        
+        data = function(..., replace = FALSE) {
+            opt$data <<- if (replace) list(list(...))
+            else c(opt$data, list(list(...)))
+        },
+        
+        marks = function(..., replace = FALSE) {
+            opt$marks <<- if (replace) list(list(...))
+            else c(opt$marks, list(list(...)))
+        },
+        
         scales = function(...) opt$scales <<- list(...),
         axes = function(...) opt$axes <<- list(...),
-        marks = function(...) opt$marks <<- list(...),
 
         #' Print chart as HTML
         html = function(id = tempfile(tmpdir = "")) {  # tempfile() is just used to create a random string
