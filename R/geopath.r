@@ -6,8 +6,8 @@
 geopath <- function(
     data, 
     labels = names(data),
-    width = 1200, 
-    height = 800, 
+    width = 600, 
+    height = 400, 
     font = "Helvetica Neue", 
     font.size = 14, 
     fill.color = "pink", 
@@ -16,16 +16,13 @@ geopath <- function(
     padding = c(0, 0, 0, 0),
     url = "data/us-states.json",
     projection = "albersUsa",
-    scale = 300,
+    scale = 500,
     translate = c(width / 2, height / 2)  # map position is centered given the width and height
     ) {
 
     # Create Vega object
-    a <- rVega:::Vega$new()
-    
-    a$width(width)
-    a$height(height)
-    
+    a <- rVega:::Vega$new(width = width, height = height)
+
     a$data(
         name = "world",
         url = url,
