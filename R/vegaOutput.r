@@ -18,8 +18,9 @@ vegaOutput <- function(outputId) {
         # Add javascript sources to header
         tagList(
             singleton(tags$head(tags$script(src = "js/d3.v3.min.js", type='text/javascript'))),
-            singleton(tags$head(tags$script(src = "js/vega.min.js", type='text/javascript'))),
-            singleton(tags$head(tags$script(src = "js/winkel3.js", type='text/javascript')))
+            singleton(tags$head(tags$script(src = "js/d3.geo.projection.v0.min.js", type='text/javascript'))),
+            singleton(tags$head(tags$script(src = "js/vega.min.js", type='text/javascript')))
+            
         ),
         
         # Add chart html
