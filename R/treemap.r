@@ -13,8 +13,8 @@
 #' @param padding Padding c("top", "bottom", "left", "right")
 #' 
 #' @export
-vega_treemap <- function(
-    data, 
+treemap <- function(
+    data,
     labels = names(data),
     width = 500, 
     height = 400, 

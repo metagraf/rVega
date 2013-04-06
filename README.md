@@ -14,7 +14,7 @@ More about Vega: [http://trifacta.github.com/vega/](http://trifacta.github.com/v
 
 ```
 library(rVega)
-vega_treemap(1:26, letters)
+treemap(1:26, letters)
 ```
 
 Demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/](http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/)
@@ -22,9 +22,9 @@ Demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/](http://glimmer.rst
 ### Geopath
 
 ```
-vega_geopath(url = "data/world-countries.json", projection = "winkel3", scale = 200)
+geopath(url = "data/world-countries.json", projection = "winkel3", scale = 200)
 
-vega_geopath(url = "data/world-countries.json", projection = "orthographic", scale = 300)
+geopath(url = "data/world-countries.json", projection = "orthographic", scale = 300)
 ```
 
 Demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-2/](http://glimmer.rstudio.com/reinholdsson/rVega-demo-2/)
@@ -35,8 +35,8 @@ Demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-2/](http://glimmer.rst
 ```
 library(rVega)
 shinyServer(function(input, output) {
-    output$treemap <- renderVega({
-        vega_treemap(1:26, letters)
+    output$plot <- renderVega({
+        treemap(1:26, letters)
     })
 })
 ```
@@ -45,7 +45,7 @@ shinyServer(function(input, output) {
 ```
 library(rVega)
 shinyUI(bootstrapPage(
-    vegaOutput("treemap")
+    vegaOutput("plot")
 ))
 ```
 

@@ -1,10 +1,10 @@
-\name{vega_treemap}
-\alias{vega_treemap}
+\name{treemap}
+\alias{treemap}
 \title{Vega treemap}
 \usage{
-  vega_treemap(data, labels = names(data), width = 500,
-    height = 400, font = "Helvetica Neue", font_size = 14,
-    fill_color = "pink", hover_color = "lightblue",
+  treemap(data, labels = names(data), width = 500,
+    height = 400, font = "Helvetica Neue", font.size = 14,
+    fill.color = "pink", hover.color = "lightblue",
     padding = c(0, 0, 0, 0))
 }
 \arguments{
@@ -22,9 +22,9 @@
 
   \item{font.size}{Font size}
 
-  \item{fill_color}{Fill color}
+  \item{fill.color}{Fill color}
 
-  \item{hover_color}{Hover color}
+  \item{hover.color}{Hover color}
 
   \item{padding}{Padding c("top", "bottom", "left",
   "right")}

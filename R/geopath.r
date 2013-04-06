@@ -3,7 +3,7 @@
 #' Create a geopath visualization
 #' 
 #' @export
-vega_geopath <- function(
+geopath <- function(
     data, 
     labels = names(data),
     width = 1200, 

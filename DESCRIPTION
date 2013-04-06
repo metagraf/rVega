@@ -15,6 +15,6 @@ Collate:
     'renderVega.r'
     'vegaOutput.r'
     'rVega.r'
-    'vega-treemap.r'
     'to_array.r'
-    'vega-geopath.r'
+    'geopath.r'
+    'treemap.r'
