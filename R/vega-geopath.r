@@ -6,8 +6,8 @@
 vega_geopath <- function(
     data, 
     labels = names(data),
-    width = 500, 
-    height = 400, 
+    width = 1200, 
+    height = 800, 
     font = "Helvetica Neue", 
     font_size = 14, 
     fill_color = "pink", 
