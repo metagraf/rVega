@@ -7,8 +7,11 @@
 #' @export
 vegaOutput <- function(outputId) {
     
-    # Add resource path
+    # Add javascript resources
     suppressMessages(singleton(addResourcePath("js", system.file('js', package='rVega'))))
+    
+    # Add data resources
+    suppressMessages(singleton(addResourcePath("data", system.file('data', package='rVega'))))
 
     div(class="rVega",
         

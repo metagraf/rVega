@@ -1,5 +1,6 @@
 export(renderVega)
 export(to_array)
+export(vega_geopath)
 export(vega_treemap)
 export(vegaOutput)
 import(RJSONIO)

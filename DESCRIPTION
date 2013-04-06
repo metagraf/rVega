@@ -17,3 +17,4 @@ Collate:
     'rVega.r'
     'vega-treemap.r'
     'to_array.r'
+    'vega-geopath.r'
