@@ -13,16 +13,19 @@ vega_geopath <- function(
     fill_color = "pink", 
     hover_color = "lightblue", 
     padding = c(0, 0, 0, 0),
-    url = "data/world-countries.json",
-    projection = "winkel3"
+    url = "data/us-states.json",
+    projection = "albersUsa"
     ) {
+    
+    # TODO
+    # How to get all url (geoJSON) and projection types to work?
     
     # Create Vega object
     rVega:::Vega$new(
         list(
-            width = 1920,
-            height = 1000,
-            viewport = c(960, 500),
+            width = width,
+            height = height,
+            #viewport = c(960, 500),
             data = list(
                 list(
                     name = "world",
@@ -41,9 +44,9 @@ vega_geopath <- function(
                         transform = list(list(
                             type = "geopath",
                             value = "data",
-                            projection = projection,
-                            scale = 300,
-                            translate = c(960, 500)
+                            projection = projection
+                            #scale = 300,
+                            #translate = c(960, 500)
                         ))
                     ),
                     properties = list(
