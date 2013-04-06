@@ -20,7 +20,7 @@ Vega <- setRefClass(
         name = function(x) opt$name <<- x,
         width = function(x) opt$width <<- x,
         height = function(x) opt$height <<- x,
-        viewport = function(...) opt$viewport <<- list(...),
+        viewport = function(x) opt$viewport <<- x,
         padding = function(...) opt$padding <<- list(...),
         
         data = function(..., replace = FALSE) {
