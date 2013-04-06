@@ -64,6 +64,5 @@ geopath <- function(
         )
     )
     
-    return(a)
-
+    return(a$copy())
 }

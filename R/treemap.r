@@ -82,6 +82,5 @@ treemap <- function(
         )
     )
     
-    return(a)
-
+    return(a$copy())
 }
