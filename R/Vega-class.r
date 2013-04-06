@@ -12,17 +12,30 @@ Vega <- setRefClass(
     "Vega",
     fields = list(opt = "list"),
     methods = list(
-        initialize = function(x = NULL) {
-            opt <<- if (is.null(x)) list() else x
+        initialize = function(
+            # Defaults
+            width = 600,
+            height = 400,
+            padding = c(0, 0, 0, 0),
+            viewport = NULL,
+            name = NULL,
+            spec = NULL  # specification list
+        ) {
+            # Set arguments
+            opt <<- if (is.null(spec)) list() else spec
+            opt$name <<- name
+            opt$width <<- width
+            opt$height <<- height
+            opt$padding <<- list(
+                top = padding[[1]], 
+                bottom = padding[[2]], 
+                left = padding[[3]], 
+                right = padding[[4]]
+            )
+            opt$viewport <<- viewport
         },
 
         #' Wrapper methods
-        name = function(x) opt$name <<- x,
-        width = function(x) opt$width <<- x,
-        height = function(x) opt$height <<- x,
-        viewport = function(x) opt$viewport <<- x,
-        padding = function(...) opt$padding <<- list(...),
-        
         data = function(..., replace = FALSE) {
             opt$data <<- if (replace) list(list(...))
             else c(opt$data, list(list(...)))

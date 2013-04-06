@@ -2,10 +2,9 @@
 \alias{treemap}
 \title{Vega treemap}
 \usage{
-  treemap(data, labels = names(data), width = 500,
-    height = 400, font = "Helvetica Neue", font.size = 14,
-    fill.color = "pink", hover.color = "lightblue",
-    padding = c(0, 0, 0, 0))
+  treemap(data, labels = names(data),
+    font = "Helvetica Neue", font.size = 14,
+    fill.color = "pink", hover.color = "lightblue", ...)
 }
 \arguments{
   \item{data}{Numeric vector that determines the size of
@@ -13,10 +12,6 @@
 
   \item{labels}{Label vector, default "names(data)". If
   NULL labels will be removed.}
-
-  \item{width}{Width}
-
-  \item{height}{Height}
 
   \item{font}{Font}
 
@@ -26,8 +21,8 @@
 
   \item{hover.color}{Hover color}
 
-  \item{padding}{Padding c("top", "bottom", "left",
-  "right")}
+  \item{...}{Vega class arguments (such as width, height,
+  padding, viewport, etc.)}
 }
 \description{
   Create a treemap visualization

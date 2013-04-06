@@ -4,25 +4,21 @@
 #' 
 #' @param data Numeric vector that determines the size of the boxes
 #' @param labels Label vector, default "names(data)". If NULL labels will be removed.
-#' @param width Width
-#' @param height Height
 #' @param font Font
 #' @param font.size Font size
 #' @param fill.color Fill color
 #' @param hover.color Hover color
-#' @param padding Padding c("top", "bottom", "left", "right")
+#' @param ... Vega class arguments (such as width, height, padding, viewport, etc.)
 #' 
 #' @export
 treemap <- function(
     data,
     labels = names(data),
-    width = 500, 
-    height = 400, 
     font = "Helvetica Neue", 
     font.size = 14, 
     fill.color = "pink", 
-    hover.color = "lightblue", 
-    padding = c(0, 0, 0, 0)
+    hover.color = "lightblue",
+    ...
 ) {
     
     # Prepare empty labels if set to null
@@ -39,18 +35,8 @@ treemap <- function(
     )
 
     # Create Vega object
-    a <- rVega:::Vega$new()
-    
-    #a$name("treemap")
-    a$width(width)
-    a$height(height)
-    a$padding(
-        top = padding[1], 
-        bottom = padding[2], 
-        left = padding[3], 
-        right = padding[4]
-    )
-    
+    a <- rVega:::Vega$new(...)
+
     a$data(
         name = "table",
         values = x,
