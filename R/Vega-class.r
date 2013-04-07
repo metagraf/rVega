@@ -46,7 +46,11 @@ Vega <- setRefClass(
             else c(opt$marks, list(list(...)))
         },
         
-        scales = function(...) opt$scales <<- list(...),
+        scales = function(..., replace = FALSE) {
+            opt$scales <<- if (replace) list(list(...))
+            else c(opt$scales, list(list(...)))
+        },
+        
         axes = function(...) opt$axes <<- list(...),
 
         #' Print chart as HTML
