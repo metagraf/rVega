@@ -6,13 +6,15 @@
 geopath <- function(
     data = NULL,  # variable data
     id = names(data),  # id vector (e.g. wdi codes for matching wdi.geo.json)
-    fill.color = "lightblue", 
-    hover.color = "blue",
-    border.color = "white",
-    border.width = 0.25,
+    #fill = "lightblue",
+    stroke = "white",
+    strokeWidth = 0.5,
+    #hover.fill = fill,
+    hover.stroke = stroke,
+    hover.strokeWidth = strokeWidth,
     url = "json/wdi.geo.json",
     projection = "orthographic",
-    scale = 500,
+    scale = 800,
     translate = c(a$opt$width / 2,  a$opt$height / 2),  # as default map position is centered
     ...
     ) {
@@ -65,7 +67,7 @@ geopath <- function(
             )
         )
     )
-    
+
     a$scales(
         name = "color",
         domain = list(
@@ -82,20 +84,20 @@ geopath <- function(
         ),
         properties = list(
             enter = list(
-                stroke = list(value = border.color),
-                strokeWidth = list(value = border.width),
                 path = list(field = "path")
             ),
             update = list(
                 fill = list(
                     scale = "color",
                     field = "value.data.val"
-                )
+                ),
+                strokeWidth = list(value = strokeWidth),
+                stroke = list(value = stroke)
             ),
             hover = list(
-                fill = list(
-                    value = hover.color
-                )
+                #fill = list(value = hover.fill),
+                strokeWidth = list(value = hover.strokeWidth),
+                stroke = list(value = hover.stroke)
             )
         )
     )
