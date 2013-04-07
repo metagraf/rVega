@@ -22,9 +22,7 @@ Demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-1/](http://glimmer.rst
 ### Geopath
 
 ```
-geopath(url = "json/world-countries.json", projection = "winkel3", scale = 200)
-
-geopath(url = "json/wdi.geo.json", projection = "orthographic", scale = 300)
+geopath(...)  # to be updated
 ```
 
 Demo: [http://glimmer.rstudio.com/reinholdsson/rVega-demo-2/](http://glimmer.rstudio.com/reinholdsson/rVega-demo-2/)
