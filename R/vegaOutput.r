@@ -11,7 +11,7 @@ vegaOutput <- function(outputId) {
     suppressMessages(singleton(addResourcePath("js", system.file('js', package='rVega'))))
 
     # Add data resources
-    suppressMessages(singleton(addResourcePath("data", system.file('data', package='rVega'))))
+    suppressMessages(singleton(addResourcePath("json", system.file('json', package='rVega'))))
     
     div(class="rVega",
         
