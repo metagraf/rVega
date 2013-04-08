@@ -6,10 +6,8 @@
 geopath <- function(
     data = NULL,  # variable data
     id = names(data),  # id vector (e.g. wdi codes for matching wdi.geo.json)
-    #fill = "lightblue",
     stroke = "white",
     strokeWidth = 0.5,
-    #hover.fill = fill,
     hover.stroke = stroke,
     hover.strokeWidth = strokeWidth,
     url = "json/wdi.geo.json",
