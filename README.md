@@ -53,6 +53,10 @@ shinyUI(bootstrapPage(
 
 - [clickme](https://github.com/nachocab/clickme) by Nacho Caballero
 
+- [rNVD3](https://github.com/ramnathv/rNVD3) by [Ramnath Vaidyanathan](https://github.com/ramnathv)
+
+- [rHighcharts](https://github.com/metagraf/rHighcharts) by [Thomas Reinholdsson](https://github.com/reinholdsson)
+
 
 
 
