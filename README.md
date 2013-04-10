@@ -49,9 +49,9 @@ shinyUI(bootstrapPage(
 
 ## See also
 
-- [gg2v](https://github.com/hadley/gg2v) by Hadley Wickham
+- [gg2v](https://github.com/hadley/gg2v) by [Hadley Wickham](https://github.com/hadley)
 
-- [clickme](https://github.com/nachocab/clickme) by Nacho Caballero
+- [clickme](https://github.com/nachocab/clickme) by [Nacho Caballero](https://github.com/nachocab)
 
 - [rNVD3](https://github.com/ramnathv/rNVD3) by [Ramnath Vaidyanathan](https://github.com/ramnathv)
 
