@@ -8,7 +8,7 @@ More about Vega: [http://trifacta.github.com/vega/](http://trifacta.github.com/v
 
 ## Installation
 
-    devtools::install_github("rVega", "metagraf")
+    devtools::install_github("metagraf/rVega")
 
 ## Examples
 
